@@ -15,7 +15,8 @@ def solve_greedy(words: iter, char_blacklist: iter, char_forcelist: iter, char_i
         if check_conditions(word, char_blacklist, char_forcelist, char_invalidpos_list):
             word_canidates.append(word)
             if len(word_canidates) >= n:
-                return word_canidates
+                break
+    return word_canidates
 
 
 def check_conditions(word, char_blacklist: iter, char_forcelist: iter, char_invalidpos_list: iter):
